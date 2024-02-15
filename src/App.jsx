@@ -36,16 +36,7 @@ export default function App() {
             <div key={index} className="sonnet">
               <h3>{sonnet.number}</h3>
               {sonnet.lines.map((line, idx) => (
-                <p key={idx}>
-                  {line.split(searchInput).map((word, i) => (
-                    <React.Fragment key={i}>
-                      {i > 0 && (
-                        <span className="highlight">{searchInput}</span>
-                      )}
-                      {word}
-                    </React.Fragment>
-                  ))}
-                </p>
+                <p key={idx}>{line}</p>
               ))}
             </div>
           ))
